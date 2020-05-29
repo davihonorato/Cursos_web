@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Flash Cursos - Cadastro</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <form action="cadastro.py" method="POST">
+  <fieldset>
+    <legend>Dados Pessoais</legend>
+	
+	Nome: <br>
+	<input type="text" name="nome"><br><br>
+	
+	Data de Nascimento:<br>
+	<input type="date" name="data-nascimento"><br><br>
+	
+	Sexo:<br>
+	<input type="radio" name="sexo" value="masculino"> M
+	<input type="radio" name="sexo" value="feminino"> F
+	<input type="radio" name="sexo" value="none"> Não declarar
+  </fieldset>
+  
+  <fieldset>
+    <legend>Dados do Curso</legend>
+	
+	Curso:<br>
+	<input name="cursos" list="lista-cursos"> <br><br>
+	<datalist id="lista-cursos">
+	  <option value="HTML5">
+	  <option value="CSS3">
+	  <option value="PHP">
+	  <option value="C++">
+	  <option value="PYTHON">
+	</datalist>
+	
+	Turno:<br>
+	<input name="turno" list="lista-turno"><br><br>
+	<datalist id="lista-turno">
+	  <option value="Matutino">
+	  <option value="Vespertino">
+	  <option value="Noturno">
+	</datalist>
+	
+	Cor da camisa:<br>
+	<input type="color" name="cor"><br>
+  </fieldset>
+  
+  <fieldset>
+    <legend>Contato</legend>
+	Numero para contato:<br>
+	<input type="tel" nome="contato1" placeholder="99999-9999" required><br><br>
+	<input type="tel" nome="contato2" placeholder="99999-9999"><br><br>
+	
+	E-mail:<br>
+	<input type="email" name="email" placeholder="user@email.com" required><br>
+  </fieldset>
+  
+  <input type="submit" name="btn-enviar" value="Enviar">
+  </form>
+</body>
+
+</html>
